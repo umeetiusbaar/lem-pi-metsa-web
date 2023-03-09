@@ -20,10 +20,10 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div className="text-center font-bold text-green-800 text-9xl">
+        <div className="text-center font-bold text-green-800 text-4xl sm:text-7xl">
           <h1>LEM-PI-METSÄN PUOLESTA!</h1>
         </div>
-        <div className="text-center font-bold text-red-700 text-5xl">
+        <div className="text-center font-bold text-red-700 text-2xl sm:text-5xl">
           <h1>#EiPuskiaistenMoottoritietä</h1>
         </div>
         <div>
