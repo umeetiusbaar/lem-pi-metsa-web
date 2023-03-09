@@ -20,22 +20,25 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div className="text-center font-bold text-green-800 text-4xl sm:text-7xl">
+        <div className="text-center font-bold text-green-800 text-4xl sm:text-7xl pt-5 pb-5">
           <h1>LEM-PI-METSÄN PUOLESTA!</h1>
         </div>
-        <div className="text-center font-bold text-red-700 text-2xl sm:text-5xl">
+        <div className="text-center font-bold text-red-700 text-2xl sm:text-5xl pt-0 pb-5">
           <h1>#EiPuskiaistenMoottoritietä</h1>
         </div>
         <div>
           <SignatureCount />
         </div>
-        <div className="max-w-screen-lg mx-auto items-center justify-center h-full">
+        <div className="max-w-screen-lg mx-auto">
           <MonthlyImage />
         </div>
       </main>
       <footer>
         <div className="text-center font-normal">
           <a
+            className="underline"
+            target="_blank"
+            rel="noopener"
             href="https://icons8.com/icons/set/favicon-tree"
             title="evergreen-icon"
           >
