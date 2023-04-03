@@ -1,14 +1,10 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import SignatureCount from "../components/SignatureCount";
 import MonthlyImage from "@/components/MonthlyImage";
-import { Main } from "next/document";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="bg-green-300 h-full">
+    <div>
       <Head>
         <title>LemPi-metsän puolesta!</title>
         <meta name="description" content="LemPi-metsän puolesta!" />
