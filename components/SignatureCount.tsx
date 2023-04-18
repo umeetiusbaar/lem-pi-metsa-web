@@ -17,24 +17,13 @@ const SignatureCount = () => {
   }, []);
 
   return (
-    <div className="text-center">
+    <span className="badge counter">
       {signatureCount !== null ? (
-        <p className="text-2xl">
-          <span className="font-bold">{signatureCount}</span> ihmistä on
-          allekirjoittanut lähiluontoa puolustavan{" "}
-          <a
-            className="underline"
-            target="_blank"
-            rel="noopener"
-            href="https://www.adressit.com/pirkkalan_ja_lempaalan_valinen_virkistymetsa_ja_ekologinen_kaytava_tulee_sailyttaa_sellaisena_myos_tulevaisuudessa"
-          >
-            adressin
-          </a>
-        </p>
+          <span>{signatureCount}</span>
       ) : (
-        <p>Loading signature count...</p>
+        <i className="fa fa-spinner" aria-hidden="true"></i>
       )}
-    </div>
+    </span>
   );
 };
 
