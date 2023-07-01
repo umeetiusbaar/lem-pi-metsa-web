@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 const MonthlyImage = () => {
@@ -9,7 +11,13 @@ const MonthlyImage = () => {
     setImageUrl(imageSrc);
   }, []);
 
-  return <img src={imageUrl} alt="Monthly Image" />;
+  return (
+    <img
+      src={imageUrl}
+      alt="Monthly Image"
+      className="absolute top-0 left-0 w-full h-full object-cover object-center"
+    />
+  );
 };
 
 export default MonthlyImage;

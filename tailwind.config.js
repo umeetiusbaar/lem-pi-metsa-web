@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'space-grotesk': ['Space Grotesk', 'sans-serif']
+      },
+      colors: {
+        'spring-yellow': '#fff500'
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }

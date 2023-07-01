@@ -1,14 +1,11 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import { load } from "cheerio";
 
 type PetitionData = {
   signatures: number;
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<PetitionData | { message: string }>
-) {
+export async function GET() {
   try {
     const response = await fetch(
       "https://www.adressit.com/stats.php?id=302400"
@@ -18,11 +15,17 @@ export default async function handler(
     const signaturesText = $(".signatureAmount").text().trim();
     if (signaturesText) {
       const signatures = parseInt(signaturesText.replace(/\D/g, ""));
-      res.status(200).json({ signatures });
+      return NextResponse.json({ signatures });
     } else {
-      res.status(404).json({ message: "Number of signatures not found" });
+      return NextResponse.json(
+        { message: "Number of signatures not found" },
+        { status: 404 }
+      );
     }
   } catch (error) {
-    res.status(500).json({ message: "Error fetching number of signatures" });
+    return NextResponse.json(
+      { message: "Error fetching number of signatures" },
+      { status: 500 }
+    );
   }
 }

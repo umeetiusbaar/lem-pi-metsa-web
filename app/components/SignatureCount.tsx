@@ -1,4 +1,8 @@
+'use client'
+
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const SignatureCount = () => {
   const [signatureCount, setSignatureCount] = useState<number | null>(null);
@@ -6,7 +10,7 @@ const SignatureCount = () => {
   useEffect(() => {
     const fetchSignatureCount = async () => {
       try {
-        const response = await fetch("/api/petition");
+        const response = await fetch("/api/petitions");
         const { signatures } = await response.json();
         setSignatureCount(signatures);
       } catch (error) {
@@ -17,11 +21,11 @@ const SignatureCount = () => {
   }, []);
 
   return (
-    <span className="badge counter">
+    <span>
       {signatureCount !== null ? (
           <span>{signatureCount}</span>
       ) : (
-        <i className="fa fa-spinner" aria-hidden="true"></i>
+        <FontAwesomeIcon icon={faSpinner} spin />
       )}
     </span>
   );
