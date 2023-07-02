@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
+import "./fonts";
+import { space_grotesk } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lempimetsanpuolesta.net"),
@@ -25,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fi">
+    <html lang="fi" className={space_grotesk.className}>
       <body>{children}</body>
     </html>
   );

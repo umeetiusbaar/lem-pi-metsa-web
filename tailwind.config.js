@@ -7,11 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'space-grotesk': ['Space Grotesk', 'sans-serif']
+      fontSize: {
+        '44': '44px',
       },
       colors: {
-        'spring-yellow': '#fff500'
+        'spring-yellow': '#fff500',
+        'dark-gray': 'rgb(11,45,47)',
       }
     }
   },
