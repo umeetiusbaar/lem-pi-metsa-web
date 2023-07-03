@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +10,9 @@ const SignatureCount = () => {
   useEffect(() => {
     const fetchSignatureCount = async () => {
       try {
-        const response = await fetch("/api/petitions");
+        const response = await fetch("/api/petitions", {
+          next: { revalidate: 60 },
+        });
         const { signatures } = await response.json();
         setSignatureCount(signatures);
       } catch (error) {
@@ -23,7 +25,7 @@ const SignatureCount = () => {
   return (
     <span>
       {signatureCount !== null ? (
-          <span>{signatureCount}</span>
+        <span>{signatureCount}</span>
       ) : (
         <FontAwesomeIcon icon={faSpinner} spin />
       )}
