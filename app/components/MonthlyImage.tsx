@@ -14,7 +14,7 @@ const MonthlyImage = () => {
   return (
     <img
       src={imageUrl}
-      alt="Monthly Image"
+      alt="Kuukausittainen kuva Lempäälän Kortejärveltä"
       className="absolute top-0 left-0 w-full h-full object-cover object-center"
     />
   );

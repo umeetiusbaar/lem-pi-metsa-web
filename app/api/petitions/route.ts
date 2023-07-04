@@ -8,7 +8,10 @@ type PetitionData = {
 export async function GET() {
   try {
     const response = await fetch(
-      "https://www.adressit.com/stats.php?id=302400"
+      "https://www.adressit.com/stats.php?id=302400",
+      {
+        cache: "no-store",
+      }
     );
     const text = await response.text();
     const $ = load(text);
