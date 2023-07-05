@@ -18,7 +18,9 @@ export async function GET() {
     const signaturesText = $(".signatureAmount").text().trim();
     if (signaturesText) {
       const signatures = parseInt(signaturesText.replace(/\D/g, ""));
-      return NextResponse.json({ signatures });
+      const jsonResponse = NextResponse.json({ signatures });
+      jsonResponse.headers.set("cache-control", "no-store");
+      return jsonResponse;
     } else {
       return NextResponse.json(
         { message: "Number of signatures not found" },
