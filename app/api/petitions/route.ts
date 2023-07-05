@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { load } from "cheerio";
 
+export const revalidate = 0;
+
 type PetitionData = {
   signatures: number;
 };
@@ -11,7 +13,9 @@ export async function GET() {
     const response = await fetch(
       `https://www.adressit.com/stats.php?id=302400?timestamp=${timestamp}`,
       {
-        cache: "no-store",
+        next: {
+          revalidate: 300,
+        },
       }
     );
     const text = await response.text();
