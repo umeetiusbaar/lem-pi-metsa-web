@@ -12,7 +12,7 @@ export default function Home() {
       <MonthlyImage />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="max-w-xl mx-auto">
-          <div className="bg-white rounded-xl p-5 mb-5">
+          <div className="bg-white bg-opacity-75 rounded-xl p-5 mb-5">
             <h1 className="font-bold text-44 text-center text-green-900 mb-5">
               Lem-Pi metsän puolesta!
             </h1>
@@ -27,7 +27,7 @@ export default function Home() {
               #EiPuskiaistenMoottoritietä
             </p>
             <hr className="border-t border-gray-300 my-5" />
-            <div className="bg-spring-yellow rounded-xl p-5">
+            <div className="bg-spring-yellow bg-opacity-75 rounded-xl p-5">
               <div className="mb-3 flex items-center">
                 <div className="font-bold text-2xl text-white mr-3 bg-dark-gray rounded-lg pl-3 pr-3 pt-2 pb-2">
                   <SignatureCount />
