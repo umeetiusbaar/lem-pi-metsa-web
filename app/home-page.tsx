@@ -18,9 +18,10 @@ export default function Home() {
             </h1>
             <p className={`${inter.className} text-base  text-green-900 mb-5`}>
               Lempäälän ja Pirkkalan välinen metsäalue - LemPi-metsä - on
-              tuhansien eliölajien koti ja samoin tuhansien ihmisten rakas
-              luonto- ja virkistyskohde. Nyt sitä uhkaavat valtatie 3:n uusi
-              linjaus sekä kuntien massiiviset kaavoitussuunnitelmat.
+              tuhansien eliölajien koti sekä tuhansien ihmisten rakas luonto- ja
+              virkistyskohde. Nyt sitä uhkaavat valtatie 3:n uusi linjaus
+              Lempäälän Puskiaisista Pirkkalan Linnakallioon sekä siihen
+              nojaavat massiiviset kuntien kaavoitussuunnitelmat.
             </p>
             <p className="text-2xl font-bold text-center text-red-700 mb-5">
               #EiPuskiaistenMoottoritietä
