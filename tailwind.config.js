@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
+        '40': '40px',
         '44': '44px',
       },
       colors: {
@@ -16,5 +17,7 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [
+    require('@headlessui/tailwindcss')({ prefix: 'ui' })
+  ]
 }

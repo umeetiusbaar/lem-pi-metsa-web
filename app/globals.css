@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+svg.fa-xs {
+    width: 2em;
+    height: 2em;
+}
