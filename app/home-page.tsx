@@ -1,12 +1,9 @@
 "use client";
 
 import SignatureCount from "./components/SignatureCount";
-import MonthlyImage from "./components/MonthlyImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { inter } from "./fonts";
-import NavigationMenu from "./ui/Menu";
-import Example from "./ui/Tabs";
 
 export default function Home() {
   return (

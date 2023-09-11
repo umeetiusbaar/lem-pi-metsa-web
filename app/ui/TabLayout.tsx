@@ -14,10 +14,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const routes = [
-  { name: "Home", path: "/", icon: faHome },
+  { name: "Koti", path: "/", icon: faHome },
   { name: "Info", path: "/info", icon: faInfo },
   { name: "Media", path: "/media", icon: faNewspaper },
-  { name: "Gallery", path: "/gallery", icon: faImages },
+  { name: "Galleria", path: "/gallery", icon: faImages },
 ];
 
 export default function TabLayout({ children }: { children: React.ReactNode }) {
@@ -33,30 +33,21 @@ export default function TabLayout({ children }: { children: React.ReactNode }) {
     );
   }, [pathname]);
 
+  const handleTabClick = (path: string) => {
+    console.log(`Clicked ${path}`);
+    router.push(path);
+  };
+
   return (
-    <div className="flex p-10 bg-white rounded shadow-lg space-y-6 z-10 sm:w-96 md:w-1/2 lg:w-1/3 xl:w-2/3">
-      <div className="flex flex-col space-y-2 mr-4">
-        {routes.map((route) => (
-          <button
-            type="button"
-            title={route.name}
-            key={route.name}
-            onClick={() => {
-              console.log(`Clicked ${route.name}`);
-              router.push(route.path);
-            }}
-            className={`p-2 rounded ${
-              selectedTab && selectedTab.path === route.path
-                ? "bg-gray-200"
-                : ""
-            }`}
-          >
-            <FontAwesomeIcon icon={route.icon} size="xs" />
-          </button>
-        ))}
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        {children}
+    <div className="flex flex-col items-center justify-center h-screen z-10">
+      <div className="h-[calc(100vh-4rem)]">
+        <div className="mt-6 content-panel mx-auto">
+          {routes.map((route) => (
+            <div key={route.path} hidden={pathname !== route.path}>
+              {children}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

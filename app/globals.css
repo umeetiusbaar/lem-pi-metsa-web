@@ -3,6 +3,75 @@
 @tailwind utilities;
 
 svg.fa-xs {
-    width: 2em;
-    height: 2em;
+  width: 2em;
+  height: 2em;
+}
+
+@media (max-width: 480px) {
+  .content-panel {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 480px) {
+  .content-panel {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 824px) {
+  .content-panel {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-panel {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1367px) {
+  .content-panel {
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1724px) {
+  .content-panel {
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 2224px) {
+  .content-panel {
+    max-width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.bg-stretch {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+html,
+body {
+  overflow-y: hidden;
+  height: 100%;
 }
